@@ -38,7 +38,7 @@ const StduentResults = async (req, res) => {
     try {
         const email = req.query.studentId;
 
-        const user = await StudentResult.findOne({studentId: email });
+        const user = await StudentResult.find({studentId: email });
 
         console.log(email);
         console.log(user);
