@@ -4,7 +4,7 @@ const Card= require('../Model/cardSchema')
 
 const CreatCard =async (req,res)=>{  /// 
     try {
-        const {title ,image} = req.body;
+        const {title ,image} = req.body; 
         const data = {title,image };
         const card = new Card(data);
 

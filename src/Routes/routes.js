@@ -1,5 +1,6 @@
 const express=require('express');
 const cont = require('../Control/control.js')
+
 const quizWork = require('../Control/quizControl.js')
 const card = require('../Control/cardControl.js')
 
