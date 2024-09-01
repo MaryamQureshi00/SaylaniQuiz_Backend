@@ -11,6 +11,7 @@ router.post("/postAnnouncement", cont.postRequest);
 // Get all announcements
 router.get("/getAnnouncement", cont.getALLRequest);
 
+
 // edit announcement
 
 router.post("/editAnnouncement/", cont.editRequest);
@@ -21,6 +22,3 @@ router.delete("/deleteAnnouncement", cont.deleteRequest);
 
 module.exports = router;
 
-// edit announcement
-
-module.exports = router;
