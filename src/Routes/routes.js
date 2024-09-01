@@ -1,5 +1,6 @@
 const express=require('express');
 const cont = require('../Control/control.js')
+
 const quizWork = require('../Control/quizControl.js')
 const card = require('../Control/cardControl.js')
 
@@ -15,6 +16,11 @@ router.get("/getallUser",cont.getALLRequest)
 //Quiz Route
 router.post("/quiz",quizWork.createQuiz)  
 router.get("/getquiz",quizWork.getQuiz) 
+
+//  both quiz and card 
+router.post("/createQuizCard",card.createCardAndQuiz)  
+router.get("/deleteQuizCard",card.deleteCardAndQuiz) 
+
 
 
 //Create Card
