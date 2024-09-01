@@ -43,6 +43,12 @@ const getQuiz = async(req, res)=>{
     }
 
 }
+
+
+
+
+
+
 module.exports={createQuiz,getQuiz}
 
 

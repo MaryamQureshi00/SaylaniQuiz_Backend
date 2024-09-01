@@ -4,15 +4,27 @@ const userSignup = async (req, res) => {
     try {
         const { username, contact_no, email, password } = req.body;
         const data = { username, contact_no, email, password };
-        const user = new User(data);
 
-        console.log(user);
+        const user = await User.findOne({ email });
+if(user){
+    const usersave = new User(data);
+    
+    console.log(usersave);
+    
+    await user.save();
+    res.status(201).send({    
+        message: "User successfully signed up",
+        user:usersave
+    });
 
-        await user.save();
-        res.status(201).send({    
-            message: "User successfully signed up",
-            user
-        });
+}else{
+
+    res.status(201).send({    
+        user: "Email already Exist",
+       
+    });
+    
+}
     } catch (e) {
         console.log(e);
         res.status(500).send({ error: "An error occurred while signing up" });

@@ -11,4 +11,14 @@ router.post("/postAnnouncement", cont.postRequest);
 // Get all announcements
 router.get("/getAnnouncement", cont.getALLRequest);
 
+
+// edit announcement
+
+router.post("/editAnnouncement/", cont.editRequest);
+
+//  delete announcement 
+
+router.delete("/deleteAnnouncement", cont.deleteRequest);
+
 module.exports = router;
+

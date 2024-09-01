@@ -17,6 +17,11 @@ router.get("/getallUser",cont.getALLRequest)
 router.post("/quiz",quizWork.createQuiz)  
 router.get("/getquiz",quizWork.getQuiz) 
 
+//  both quiz and card 
+router.post("/createQuizCard",card.createCardAndQuiz)  
+router.get("/deleteQuizCard",card.deleteCardAndQuiz) 
+
+
 
 //Create Card
 router.post("/CardCreate",card.CreatCard)
